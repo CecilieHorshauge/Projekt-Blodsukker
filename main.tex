@@ -27,6 +27,11 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
+
+%Is defined to be equal to
+\newcommand*{\defeq}{\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt
+                     \hbox{\scriptsize.}\hbox{\scriptsize.}}}%
+                     =}
  
 \title{{\large \textsc{Projekt Blodsukker}}}
 \author{Cecilie Horshauge}
@@ -52,7 +57,19 @@ Beskriv med ord hvorledes koncentrationen udvikler sig på kort, lidt længere o
 \section*{Opgave B} 
 Hvad er den laveste koncentration, som forsøgspersonen oplever?
 \subsection*{Løsning}
-
+Først bestemmes \(c'(t)\).\\
+\begin{align*}
+    c'(t)&=(83+75 \cdot (a^t-b^t))'\\
+    &= (83)'+ 75 \cdot ((a^t)'-(b^t)')\\
+    &= 0+ 75 \cdot (a^t\cdot \ln(t)-b^t\cdot \ln(t))\\
+    &= 75\cdot \ln(t)\cdot (a^t-b^t)
+\end{align*}
+\subsection*{Løsning med CAS}
+\(a \defeq 0.1\, \colon\, b \defeq 0.5 \, \colon\)\\
+\(c\left(t\right)\defeq 83+75\cdot \left(a^{t}-b^{t}\right)\colon\)\\
+\(t_{\mathit{lav}}\defeq \mathit{solve}\left(c'\left(t\right)=0\right)=\textcolor{blue}{0.7459407764}\)\\
+\(c(t_{lav})=\textcolor{blue}{51.74141940}\)\\\\
+\textbf{Den laveste koncentration, som forsøgspersonen oplever, er 51.74 mg pr. 100 mL.}
 \section*{Opgave C} 
 Hvornår falder koncentrationen hurtigst og hvornår stiger den hurtigst?
 \subsection*{Løsning}
