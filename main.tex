@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=3cm]{geometry}
 
+\usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -73,7 +74,17 @@ Først bestemmes \(c'(t)\).\\
 \section*{Opgave C} 
 Hvornår falder koncentrationen hurtigst og hvornår stiger den hurtigst?
 \subsection*{Løsning}
-
+Det største fald og den største stigning hos en funktion kan altid findes ved ekstremum, der i nogle tilfælde kan findes ved endepunkterne af funktionens afledte funktion.\\
+Betragt først grafen for \(c'(t)\).\\
+\begin{center}
+\includegraphics[width = 0.65 \textwidth]{AfledtGraf.png}
+\end{center}
+Her bemærker vi et maksimum mellem 1 og 2 og at minimum der ser ud til at ligge i 0. Det er let at bestemme maksimum, vi kan blot benytte et CAS-værktøj til at isolere \(t\) i ligningen \(c''(t)=0\).\\
+\(\mathit{solve}\left(c''\left(t\right)=0\right)=\textcolor{blue}{1.491881553}\)\\
+Lad os nu overbevise os selv om at minimum hos den afledte funktion kan findes ved \(t=0\). 
+\[c'(t)=- 172.6938820 \cdot 0.1^{t}+ 51.98603854 \cdot 0.5^{t}\]
+Som \(t\) nærmer sig \(0\) vil både \(0.1^t\) og \(0.5^t\) nærme sig \(1\). Dog nærmer \(0.5^t\) siger hurtigere. Første led er mest negativt når \(t=0\), og det bliver gradvist mere negativt som \(t\) nærmer sig 0. På samme måde bliver andet led også større som \(t\) går mod 0. Leddet kan dog ikke blive større end ca. 52, hvor første led bliver betydeligt mere negativt som \(t\) nærmer sig 0. Det giver derfor også mening at mimimum må ligge i \(t=0\).\\\\
+\textbf{Koncentrationen falder altså hurtigst ved \(t=0\) og stiger hurtigst ved \(t=1.49\).}
 \section*{Opgave D} 
 Hvornår vil funktionsværdien være inden for l\% fra sin asymptotiske værdi?
 \subsection*{Løsning}
