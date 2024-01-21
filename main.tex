@@ -54,7 +54,7 @@ hvor \(t\) er målt i timer og \(a=0.1\), \(b=0.5\)
 Beskriv med ord hvorledes koncentrationen udvikler sig på kort, lidt længere og på helt langt sigt.
 
 \subsection*{Løsning}
-Ved \(t=0\), funktionens "begyndelse", vil koncentrationen have værdien \(83\) mg pr. 100 mL. Som \(t\) langsomt stiger vil koncentrationen til at begynde med falde hurtigt, det vil den mens \(a^t-b^t < 1\) . På et tidspunkt vil udviklingen stoppe med at falde. Man kan sammenligne \(t=1\) og \(t=2\). Her får vi følgende:
+Ved \(t=0\), funktionens "begyndelse", vil koncentrationen have værdien \(83\) mg pr. 100 mL. Som \(t\) langsomt stiger vil koncentrationen til at begynde med falde hurtigt. På et tidspunkt vil udviklingen stoppe med at falde. Man kan sammenligne \(t=1\) og \(t=2\). Her får vi følgende:
 \begin{align*}
     C(1)&=83+75 \cdot (0.1^1-0.5^1)=83+75 \cdot (-0.4)\\
     C(2)&=83+75 \cdot (0.1^2-0.5^2)=83+75 \cdot (-0.24)
@@ -73,14 +73,26 @@ Først bestemmes \(c'(t)\).\\
 Nu vil vi isolere \(t\) i ligningen \(c'(t)=0\).
 \begin{align*}
     0 &= 75 \cdot (a^t\cdot \ln(a)-b^t\cdot \ln(b))\\
-    0 &= a^t\cdot \ln(a)-b^t\cdot \ln(b)
+    0 &= a^t\cdot \ln(a)-b^t\cdot \ln(b)\\
+    b^t \cdot \ln(b) &= a^t\cdot \ln(a)\\
+    \frac{\ln(b)}{\ln(a)}&=\frac{a^t}{b^t}\\
+    \frac{\ln(b)}{\ln(a)}&=\left(\frac{a}{b}\right)^t\\
+    \ln\left(\frac{\ln(b)}{\ln(a)}\right) &= \ln\left(\left(\frac{a}{b}\right)^t \right)\\
+    \ln(\ln(b))-\ln(\ln(a)) &= t\cdot (\ln(a)-\ln(b))\\\\
+    t &= \frac{\ln(\ln(b))-\ln(\ln(a))}{\ln(a)-\ln(b)}
+    \intertext{Vi indsætter \(a\) og \(b\) og bestemmer \(t\)}
+    t &= \frac{\ln(\ln(0.5))-\ln(\ln(0.1))}{\ln(0.1)-\ln(0.5)}=\textcolor{blue}{0.7459407766}
 \end{align*}
+Nu da \(t\) er bestemt kan vi indsætte det fundne \(t\) i funktionen og bestemme koncentrationen.\\
+\(c(0.7459407766)=\textcolor{blue}{51.74141941}\)
+
 \subsection*{Løsning med CAS}
 \(a \defeq 0.1\, \colon\, b \defeq 0.5 \, \colon\)\\
 \(c\left(t\right)\defeq 83+75\cdot \left(a^{t}-b^{t}\right)\colon\)\\
 \(t_{\mathit{lav}}\defeq \mathit{solve}\left(c'\left(t\right)=0\right)=\textcolor{blue}{0.7459407764}\)\\
 \(c(t_{lav})=\textcolor{blue}{51.74141940}\)\\\\
 \textbf{Den laveste koncentration, som forsøgspersonen oplever, er 51.74 mg pr. 100 mL.}
+\clearpage
 \section*{Opgave C} 
 Hvornår falder koncentrationen hurtigst og hvornår stiger den hurtigst?
 \subsection*{Løsning}
@@ -95,6 +107,7 @@ Lad os nu overbevise os selv om at minimum hos den afledte funktion kan findes v
 \[c'(t)=- 172.6938820 \cdot 0.1^{t}+ 51.98603854 \cdot 0.5^{t}\]
 Som \(t\) nærmer sig \(0\) vil både \(0.1^t\) og \(0.5^t\) nærme sig \(1\). Dog nærmer \(0.5^t\) siger hurtigere. Første led er mest negativt når \(t=0\), og det bliver gradvist mere negativt som \(t\) nærmer sig 0. På samme måde bliver andet led også større som \(t\) går mod 0. Leddet kan dog ikke blive større end ca. 52, hvor første led bliver betydeligt mere negativt som \(t\) nærmer sig 0. Det giver derfor også mening at mimimum må ligge i \(t=0\).\\\\
 \textbf{Koncentrationen falder altså hurtigst ved \(t=0\) og stiger hurtigst ved \(t=1.49\).}
+\clearpage
 \section*{Opgave D} 
 Hvornår vil funktionsværdien være inden for l\% fra sin asymptotiske værdi?
 \subsection*{Løsning}
@@ -112,9 +125,7 @@ Man kan føle et stærkt ubehag, hvis blodsukkerkoncentrationen falder til under
 I hvilket tidsrum efter indsprøjtningen må forsøgspersonen være forberedt på ubehag?
 \subsection*{Løsning}
 Vi leder efter 2 tidspunkter hvor modellen har koncentrationen 60 mg pr. 100 mL. \\
-\(solve(60 = c(t))\)
-\[\textcolor{blue}{0.2926616696}\]
-\(fsolve(60 = c(t), t=2)\)
-\[\textcolor{blue}{1.588835746}\]
+\(solve(60 = c(t),t)\)
+\[\textcolor{blue}{ 1.588835746, 0.2926616696}\]
 \textbf{Altså vil man føle et stærkt ubehag mellem 0.293 og 1.589 timer efter indsprøjtningen.}
 \end{document}
