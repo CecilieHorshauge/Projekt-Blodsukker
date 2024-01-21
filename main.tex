@@ -47,14 +47,20 @@ Hormonet insulin har den virkning, at det stimulerer cellernes optagelse af sukk
 Det følgende drejer sig om en forsøgsperson, der får en indsprøjtning af en bestemt dosis insulin.\\\\
 Efter indsprøjtningen vil blodsukkerkoncentrationen ændre sig som funktion af den tid,
 der er forløbet efter indsprøjtningen. Det antages i det følgende, at denne funktion med god tilnærmelse kan beskrives på følgende form: 
-\[C(t)=83+73\cdot (a^t-b^t) \;\;\; \text{mg pr 100 mL}\]
+\[C(t)=83+75\cdot (a^t-b^t) \;\;\; \text{mg pr. 100 mL}\]
 hvor \(t\) er målt i timer og \(a=0.1\), \(b=0.5\)
 
 \section*{Opgave A} 
 Beskriv med ord hvorledes koncentrationen udvikler sig på kort, lidt længere og på helt langt sigt.
 
 \subsection*{Løsning}
-
+Ved \(t=0\), funktionens "begyndelse", vil koncentrationen have værdien \(83\) mg pr. 100 mL. Som \(t\) langsomt stiger vil koncentrationen til at begynde med falde hurtigt, det vil den mens \(a^t-b^t < 1\) . På et tidspunkt vil udviklingen stoppe med at falde. Man kan sammenligne \(t=1\) og \(t=2\). Her får vi følgende:
+\begin{align*}
+    C(1)&=83+75 \cdot (0.1^1-0.5^1)=83+75 \cdot (-0.4)\\
+    C(2)&=83+75 \cdot (0.1^2-0.5^2)=83+75 \cdot (-0.24)
+\end{align*} 
+Her bliver det altså klart at inden 2 timer er gået vil koncentrationen begynde at stige igen. Som \(t\) fortsat stiger vil forskellen mellem de to kvadrater blive mindre og mindre og koncentrationen vil gå mod 83 mg pr. 100 mL igen.'
+\clearpage
 \section*{Opgave B} 
 Hvad er den laveste koncentration, som forsøgspersonen oplever?
 \subsection*{Løsning}
