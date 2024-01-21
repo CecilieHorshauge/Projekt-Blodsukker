@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1705869029 "c:/Users/cecih/Desktop/VS Code/Projekt Blodsukker/Projekt-Blodsukker/main.tex" "main.pdf" "main" 1705869030 0
+["pdflatex"] 1705869284 "c:/Users/cecih/Desktop/VS Code/Projekt Blodsukker/Projekt-Blodsukker/main.tex" "main.pdf" "main" 1705869286 0
   "AfledtGraf.png" 1705830208 17660 2f6f04e68176c237783ce147ff3d3eec ""
-  "c:/Users/cecih/Desktop/VS Code/Projekt Blodsukker/Projekt-Blodsukker/main.tex" 1705869028 6980 95d86b24b19712c06960c5c1e5391911 ""
+  "c:/Users/cecih/Desktop/VS Code/Projekt Blodsukker/Projekt-Blodsukker/main.tex" 1705869283 6978 c84b8d541cf30a7864e219dd7882c34f ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1679575419 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1679576667 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1679576310 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
@@ -124,9 +124,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1679582872 4662201 6a1520b5c5c935088be65b26dee0a7ec ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1679583036 7883456 8b500e31a490f898c32bf97277dd79be ""
   "c:/texlive/2023/texmf.cnf" 1679582833 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1705869030 653 3d803900e53dfb7c2f3efdcfa777ee16 "pdflatex"
-  "main.out" 1705869030 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1705869028 6980 95d86b24b19712c06960c5c1e5391911 ""
+  "main.aux" 1705869286 653 3d803900e53dfb7c2f3efdcfa777ee16 "pdflatex"
+  "main.out" 1705869285 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1705869283 6978 c84b8d541cf30a7864e219dd7882c34f ""
   (generated)
   "main.aux"
   "main.log"
